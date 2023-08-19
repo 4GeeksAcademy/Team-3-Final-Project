@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="logintwo.css">
+</head>
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <h2 class="active" id="signInTab">Sign In</h2>
+            <h2 class="inactive underlineHover" id="signUpTab">Sign Up</h2>
+
+            <!-- Icon -->
+            <div class="fadeIn first">
+                
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form">
+                <p> Welcome Back To HYPNOS</p>
+                <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+                <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+                <input type="submit" class="fadeIn fourth" value="Log In">
+            </form>
+
+            <!-- Sign Up Form -->
+            <form id="signup-form" style="display: none;">
+                <p>Create an Account:</p>
+                <!-- Add sign up form fields here -->
+                <input type="text" id="signup-login" class="fadeIn second" name="signup-login" placeholder="now">
+                <input type="text" id="signup-password" class="fadeIn third" name="signup-password" placeholder="pass">
+                <input type="text" id="signup-email" class="fadeIn third" name="signup-email" placeholder="email">
+                <input type="text" id="signup-username" class="fadeIn third" name="signup-username" placeholder="username">
+                <input type="submit" class="fadeIn fourth" value="Sign Up">
+            </form>
+
+            <!-- Security Questions Form -->
+            <form id="forgot-form" style="display: none;">
+                <!-- Add security questions form fields here -->
+                <p>what is your Favorite car :</p>
+                <input type="text" id="security-question-1" class="fadeIn second" name="security-question-1" placeholder="qurisn3">
+                <p>what city were you born in:</p>
+                <input type="text" id="security-question-2" class="fadeIn third" name="security-question-2" placeholder="qutins2">
+                <p>what is your mother middle name:</p>
+                <input type="text" id="security-question-3" class="fadeIn third" name="security-question-3" placeholder="quesion1">
+                <input type="submit" class="fadeIn fourth" value="Submit">
+            </form>
+
+            <div id="submitted-data" style="display: none;">
+                <h2>Submitted Data</h2>
+                <p>Email: <span id="submitted-email"></span></p>
+                <p>Username: <span id="submitted-username"></span></p>
+            </div>
+            
+
+            <!-- Remind Password -->
+            <div id="formFooter">
+                <a class="underlineHover" href="#" id="forgotPasswordLink">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const signInTab = document.getElementById('signInTab');
+            const signUpTab = document.getElementById('signUpTab');
+            const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+            const loginForm = document.getElementById('login-form');
+            const signUpForm = document.getElementById('signup-form');
+            const forgotForm = document.getElementById('forgot-form');
+            const submittedData = document.getElementById('submitted-data');
+        
+            signInTab.addEventListener('click', function () {
+                signInTab.classList.add('active');
+                signUpTab.classList.remove('active');
+                loginForm.style.display = 'block';
+                signUpForm.style.display = 'none';
+                forgotForm.style.display = 'none';
+                submittedData.style.display = 'none';
+            });
+        
+            signUpTab.addEventListener('click', function () {
+                signInTab.classList.remove('active');
+                signUpTab.classList.add('active');
+                loginForm.style.display = 'none';
+                signUpForm.style.display = 'block';
+                forgotForm.style.display = 'none';
+                submittedData.style.display = 'none';
+            });
+        
+            forgotPasswordLink.addEventListener('click', function () {
+                signInTab.classList.remove('active');
+                signUpTab.classList.remove('active');
+                loginForm.style.display = 'none';
+                signUpForm.style.display = 'none';
+                forgotForm.style.display = 'block';
+                submittedData.style.display = 'none';
+            });
+        
+            forgotForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                // Capture submitted security questions
+                const securityQuestion1 = document.getElementById('security-question-1').value;
+                const securityQuestion2 = document.getElementById('security-question-2').value;
+                const securityQuestion3 = document.getElementById('security-question-3').value;
+        
+                if (securityQuestion1 || securityQuestion2 || securityQuestion3) {
+                    // Display the submitted security questions
+                    const submittedSecurityQuestion1 = document.getElementById('submitted-security-question-1');
+                    const submittedSecurityQuestion2 = document.getElementById('submitted-security-question-2');
+                    const submittedSecurityQuestion3 = document.getElementById('submitted-security-question-3');
+                    
+                    submittedSecurityQuestion1.textContent = securityQuestion1;
+                    submittedSecurityQuestion2.textContent = securityQuestion2;
+                    submittedSecurityQuestion3.textContent = securityQuestion3;
+                    
+                    submittedData.style.display = 'block';
+                }
+            });
+        
+            submittedData.style.display = 'none'; // Initially hide the submitted data
+        });
+        
+        
+    </script>
+
+    
+</body>
+</html>
