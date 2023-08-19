@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>People Database</title>
+</head>
+<body>
+    <h1>People Database from sql not hardcoded</h1>
+    <ul>
+        {% for person in people %}
+        <li>{{ person.first_name }} {{ person.last_name }}, Age: {{ person.age }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

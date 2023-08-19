@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="secondland.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Rest of your code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        /* Your existing CSS styles */
+        /* ... */
+        .column {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .column img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.2s;
+    }
+
+    .column:hover img {
+        transform: scale(1.1);
+    }
+
+    .column span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 8px; /* Adjust padding as needed */
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        font-size: 36px;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.2s;
+        white-space: nowrap;
+        display: inline-block;
+        border-radius: 20px; /* Rounded border */
+    }
+
+    .column:hover span {
+        opacity: 1;
+    }
+    </style>
+</head>
+<body>
+    <header class="cd-header">
+		<div class="header-wrapper">
+			<div class="logo-wrap">
+				<a href="#" class="hover-target"><span>hyp</span>nos</a>
+			</div>
+			<div class="nav-but-wrap">
+				<div class="menu-icon hover-target">
+					<span class="menu-icon__line menu-icon__line-left"></span>
+					<span class="menu-icon__line"></span>
+					<span class="menu-icon__line menu-icon__line-right"></span>
+				</div>					
+			</div>					
+		</div>				
+	</header>
+
+	<div class="nav">
+		<div class="nav__content">
+			<ul class="nav__list">
+				<li class="nav__list-item active-nav"><a href="secondland.html" class="hover-target">home</a></li>
+				<li class="nav__list-item"><a href="#" class="hover-target">Search</a></li>
+				<li class="nav__list-item"><a href="#" class="hover-target">top songs</a></li>
+				<li class="nav__list-item"><a href="#" class="hover-target">profile</a></li>
+                <li class="nav__list-item"><a href="commentPage.html" class="hover-target">comments</a></li>
+                <li class="nav__list-item"><a href="choice.html" class="hover-target">Top</a></li>
+
+			</ul>
+		</div>
+	</div>		
+    <h1>tops artist or trending songs, geners ect</h1>
+    <h3>sub-title will go here</h3> <a href="http://caniuse.com/#search=mix-blend" target="_blank">( Check Usage )</a> & <a href="http://webdesignerwall.com/tutorials/create-spotify-colorizer-effects-css-blend-modes" target="_blank">View Tutorial</a>
+  </header>
+  <section>
+    <div class="column green"><img src="https://images.pexels.com/photos/60883/girl-eyes-makeup-sexy-60883.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"/>
+        <span>Image 1 Name</span></div>
+    <div class="column red-purple"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/girl-eyes-makeup-sexy-60883.jpeg"/>
+    </div>
+  </section>
+  <section>
+    <div class="column vintage"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo.jpg"/>
+        <span>Image 2 Name</span></div>
+    <div class="column retro"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-194074.jpg"/></div>
+    <div class="column blue-light"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-207081.jpeg"/></div>
+  
+    <div class="column blue"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-157675.jpeg"/></div>
+    
+    <div class="column dark-red"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-432059.jpeg"/></div>
+    <div class="column flat-retro"><img src="https://images.pexels.com/photos/167483/pexels-photo-167483.jpeg?h=350&auto=compress"/></div>
+  </section>
+  
+  
+  
+  
+  
+  <section>
+    <div class="column teal"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-305241.jpeg"/></div>
+    <div class="column purple"><img src="https://images.pexels.com/photos/164732/pexels-photo-164732.jpeg?h=350&auto=compress&cs=tinysrgb"/></div>
+    <div class="column pink"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-175696.jpeg"/></div>
+  </section>
+  
+  <section>
+    <div class="column yellow"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-704977.jpeg"/></div>
+    <div class="column orange"><img src="https://images.pexels.com/photos/157920/woman-face-curly-hair-157920.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"/></div>
+    <div class="column blue-red"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/fashionable-girl-in-glasses-in-the-black-pants-157886.jpeg"/></div>
+    <div class="column gold"><img src="https://images.pexels.com/photos/9137/night-vintage-music-bokeh.jpg?h=350&auto=compress"/></div>
+  </section>
+  <!-- Images from https://www.pexels.com/
+   Extra special thanks to Collins for kicking off this 
+   wonderful trend. http://www.wearecollins.com/work/spotify/
+  -->
+  
+  , initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="top.css">
+
+    
+
+		
+	
+	<div class='cursor' id="cursor"></div>
+	<div class='cursor2' id="cursor2"></div>
+	<div class='cursor3' id="cursor3"></div>
+    <h1>choice</h1>
+
+<!-- Link to page
+================================================== -->
+
+
+
+
+<script src="secondland.js"></script>
+    
+</body>
+</html>
