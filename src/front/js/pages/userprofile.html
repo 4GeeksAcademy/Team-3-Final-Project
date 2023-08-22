@@ -132,6 +132,20 @@
       
     
       <script src="artistcard.js"></script>
-      <script src=""></script>
+      <script src="">
+        $(".card").click(function() {
+            var el = $(this),
+              newone = el.clone(true);
+            el.before(newone);
+            $("." + el.attr("class") + ":last").remove();
+          });
+          
+          $(".card2").click(function() {
+            var el = $(this),
+              newone = el.clone(true);
+            el.before(newone);
+            $("." + el.attr("class") + ":last").remove();
+          });
+      </script>
 </body>
 </html>
