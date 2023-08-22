@@ -288,11 +288,13 @@
         .result .imageCont img {
             width: 100%;
             filter: grayscale(100%);
-            transition: filter 0.3s ease-in-out;
+            transition: filter 0.3s ease-in-out, transform 0.5s cubic-bezier(0.2, 0.9, 0.3, 1); /* Smoother zoom transition */
+            transform-origin: center center;
         }
         
         .result:hover .imageCont img {
             filter: grayscale(0%);
+            transform: scale(1.10); /* Zoom in slightly */
         }
 
         
