@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="enter.css">
+</head>
+<body>
+    <video id="videoBkg" poster="../testing/assests/owl.jpg" preload autoplay muted loop>
+        <source src="../testing/assests/videos/spining.mp4" type="video/mp4">
+    </video>
+      
+    <div class="hero-section">
+        <h1>Enter.</h1>
+        <h1>The.</h1>
+        <h1>Trance.</h1>
+        <h1>HYPNOS.</h1>
+        
+        <button id="enterButton">Enter</button>
+    </div>
+      
+    <div class="menu-section">
+        <p>HYPNOS<span>Life</span></p>
+        <ul>
+            <li>About</li>
+            <li>Github</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    
+    <script>
+        const video = document.getElementById("videoBkg");
+        const enterButton = document.getElementById("enterButton");
+
+        // Display the poster for 1 second when the page loads
+        video.addEventListener("loadedmetadata", () => {
+            video.currentTime = 0;
+            setTimeout(() => {
+                video.play();
+            }, 500);
+        });
+
+        // Play the video when the "Enter" button is clicked
+        enterButton.addEventListener("click", () => {
+            video.play();
+        });
+    </script>
+</body>
+</html>
