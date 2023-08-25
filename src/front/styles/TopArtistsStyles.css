@@ -1,0 +1,89 @@
+
+
+
+
+
+h1 {
+    margin-top: 0.2em;
+    padding-left: 0px;
+    width: 10ch;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: helvetica,arial, sans-serif;
+    font-size: 2em;
+    width:100%;
+    height:100%;
+    color: #666;
+    font-weight: bold;
+    font-size: 10vmin;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    margin-left: 70px; /* Add some right margin for spacing */
+    
+    padding-left: 0px;
+    justify-content: center;
+}
+
+.sub-header{
+    padding-left: 0px;
+    width: 0ch;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: helvetica,arial, sans-serif;
+   font-size: 17px;
+    width:100%;
+    height:100%;
+    color: li;
+    font-weight: bold;
+    color: #666;
+    
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+  
+}
+
+.nav-item {
+
+    
+
+    overflow: hidden;
+    font-family: helvetica,arial, sans-serif;
+   font-size: 25px;
+    width:100%;
+    height:100%;
+    font-weight: bold;
+    color: #666;
+    
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    color: #666;
+
+}
+
+.container-fluid{
+
+    overflow: hidden;
+    font-family: helvetica,arial, sans-serif;
+   font-size: 45px;
+    width:100%;
+    height:100%;
+    font-weight: bold;
+    color: #666;
+    
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+
+}
+
+
+
+
+
