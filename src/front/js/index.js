@@ -19,3 +19,7 @@ import ArtistInfo from "./pages/ArtistInfo";
 //ReactDOM.render(<Enter />, document.querySelector("#app"));
 //ReactDOM.render(<TopArtists />, document.querySelector("#app"));
 ReactDOM.render(<ArtistInfo />, document.querySelector("#app"));
+
+
+
+//this is a quick test just see...
