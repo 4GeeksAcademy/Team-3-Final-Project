@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from '../component/Navbar.js'; // Adjust the path
-import TopArtistsStyles from './TopArtistsStyles.css';
+import TopArtistsStyles from '../../styles/TopArtistsStyles.css';
 
 const ArtistInfo = () => {
   const [artistData, setArtistData] = useState(null);
@@ -9,7 +9,7 @@ const ArtistInfo = () => {
   useEffect(() => {
     // Replace with your Spotify API endpoint and access token
     const spotifyApiUrl = 'https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4';
-    const accessToken = 'BQBsEB2Sv27keagw9RbIjeRzvv7WL6OlGTYiWepv08fO3Jgmda3XghGOyI0tbn_Z1bFHHzarvjk8egq9Eod-rLSFXhpMxiJJrf1zoO3WcL_0ad7qT2evxlAgv0Gd9ofUTL2yhzGS2ucnmnwMkhwMioh0db241YvMCuR7asB4M7LO8YLwP7S46KylMIEg6Hcts5IJXxHGPShUPJJf3-0v64tXgg9sUNr9';
+    const accessToken = 'BQAYeqR_2gRS87A8uTlJfzLSERR__vDnpmjbJBaPIVvKq4heGXZNv8WDJsDbOJ5Ge0KSLK2ZjT95PsyfIpYJPuitFiLIh4EcaVCx5NZZulDfw__QAicxuaAdzVK6Wcuc0Lzu7obDXtsQ3t6pZg_zApz6cAb9XbLVxjnNGJMHXt_tIHDIKgdVN7KnmjvplADICVMbAOR2XW4uE7_htlRI3cPOI9epG3ef';
 
     axios.get(spotifyApiUrl, {
       headers: {
