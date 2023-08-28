@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'; // Import Link component
 import '../../../front/styles/PreEnter.css';
 
 
@@ -53,6 +54,8 @@ class TypingEffect extends Component {
   };
 
   render() {
+
+    const { message } = this.context.store;
     return (
 
         
@@ -65,17 +68,26 @@ class TypingEffect extends Component {
         </div>
 
         <div className="button-container-PEP">
-          <p>Continue</p>
+        <Link to="/nextPage"><p>Continue</p></Link>
+        </div>
+
+
+
+        <div className="message-container">
+          {message !== null ? (
+            <p>{message}</p>
+          ) : (
+            <p>Loading message...</p>
+          )}
         </div>
       </div>
-      
-
-       
-     
 
       
     );
   }
 }
 
+
+
 export default TypingEffect;
+

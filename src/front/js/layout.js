@@ -2,10 +2,13 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 import { BackendURL } from "./component/backendURL";
+import PreEnterPage from './pages/PreEnterPage.jsx'; // Update the path
+
 
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
+import Enter from "./pages/Enter.jsx"; // Import the new page component
 import injectContext from "./store/appContext";
 
 //import { Navbar } from "./component/navbar";
@@ -23,12 +26,14 @@ const Layout = () => {
         <div>
             <BrowserRouter basename={basename}>
                 <ScrollToTop>
-                    <Navbar />
+                    
                     <Routes>
-                        <Route element={<Home />} path="/" />
-                        <Route element={<Demo />} path="/demo" />
-                        <Route element={<Single />} path="/single/:theid" />
-                        <Route element={<h1>Not found!</h1>} />
+                    
+                    <Route element={<PreEnterPage/>} path="/" /> {/* Add this route */}
+                    <Route element={<Enter />} path="/nextPage" /> {/* Add this route */}
+                    <Route element={<h1>Not found!</h1>} />
+
+                    
                     </Routes>
                     <Footer />
                 </ScrollToTop>
