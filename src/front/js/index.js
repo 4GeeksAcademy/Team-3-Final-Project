@@ -17,12 +17,12 @@ import TypingEffect from "./pages/PreEnterPage.jsx";
 import Enter from "./pages/Enter.jsx";
 
 //render your react application
-//ReactDOM.render(<Layout />, document.querySelector("#app"));
+ReactDOM.render(<Layout />, document.querySelector("#app"));
 //ReactDOM.render(<TopArtists />, document.querySelector("#app"));
 //ReactDOM.render(<ArtistInfo />, document.querySelector("#app"));
 //ReactDOM.render(<test />, document.querySelector("#app"));
 //ReactDOM.render(<AgeVerification />, document.querySelector("#app"));
-ReactDOM.render(<TypingEffect />, document.querySelector("#app"));
+//ReactDOM.render(<TypingEffect />, document.querySelector("#app"));
 //ReactDOM.render(<Enter />, document.querySelector("#app"));
 
 
