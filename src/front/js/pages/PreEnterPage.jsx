@@ -55,7 +55,7 @@ class TypingEffect extends Component {
 
   render() {
 
-    const { message } = this.context.store;
+    
     return (
 
         
@@ -73,13 +73,6 @@ class TypingEffect extends Component {
 
 
 
-        <div className="message-container">
-          {message !== null ? (
-            <p>{message}</p>
-          ) : (
-            <p>Loading message...</p>
-          )}
-        </div>
       </div>
 
       
