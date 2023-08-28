@@ -1,0 +1,201 @@
+
+
+
+
+
+h1 {
+    margin-top: 0.2em;
+    padding-left: 0px;
+    width: 10ch;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: helvetica,arial, sans-serif;
+    font-size: 2em;
+    width:100%;
+    height:100%;
+    color: #666;
+    font-weight: bold;
+    font-size: 10vmin;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    margin-left: 70px; /* Add some right margin for spacing */
+    
+    padding-left: 0px;
+    justify-content: center;
+}
+
+.sub-header{
+    padding-left: 0px;
+    width: 0ch;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: helvetica,arial, sans-serif;
+   font-size: 17px;
+    width:100%;
+    height:100%;
+    color: li;
+    font-weight: bold;
+    color: #666;
+    
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+  
+}
+
+.nav-item {
+
+    
+
+    overflow: hidden;
+    font-family: helvetica,arial, sans-serif;
+   font-size: 25px;
+    width:100%;
+    height:100%;
+    font-weight: bold;
+    color: #666;
+    
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    color: #666;
+
+}
+
+.container-fluid{
+
+    overflow: hidden;
+    font-family: helvetica,arial, sans-serif;
+   font-size: 45px;
+    width:100%;
+    height:100%;
+    font-weight: bold;
+    color: #666;
+    
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+
+}
+
+a:focus {
+    text-decoration: none;
+    color: #DDD;
+}
+
+.top-tracks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-tracks li {
+    padding-left: 2vmax;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    font-size: 24px;
+    color: #666;
+    
+}
+
+.top-tracks li:before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 100%;
+    background: #ce4f20;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.top-tracks li:hover {
+    color: #DDD;
+    padding-left: 2.5vmax;
+    text-decoration: underline;
+    
+}
+
+.top-tracks li:hover:before {
+    opacity: 1;
+    transform: translateX(-100%);
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        margin-left: 0;
+    }
+}
+
+.track-list li {
+    position: relative;
+    padding-left: 2vmax;
+    cursor: pointer;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    font-size: 34px;
+    overflow: hidden;
+    font-family: helvetica,arial, sans-serif;
+   font-size: 25px;
+    width:100%;
+    height:100%;
+    font-weight: bold;
+    
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    color: #666;
+
+}
+
+.track-list li:before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 100%;
+    background: #ce4f20;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.track-list li:hover {
+    color: #DDD;
+    padding-left: 2.5vmax;
+}
+
+.track-list li:hover:before {
+    opacity: 1;
+    transform: translateX(-100%);
+}
+
+.track-list li .play-song {
+    display: none;
+    position: absolute;
+    right: -100%; /* Initial position to hide */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: black;
+    padding: 0.5em 1em;
+    transition: right 0.2s ease;
+}
+
+.track-list li:hover .play-song {
+    display: block;
+    right: 0; /* Show on hover */
+}
+
+
+.card-img-top{
+    height: auto;
+    width: 300px;
+}
+
+
+
+
+
+

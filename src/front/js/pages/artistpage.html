@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap">
+    <style>
+
+
+
+
+body {
+	height: 100vh;
+	background-color: #f3f3f3;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Be Vietnam', sans-serif;
+}
+
+.profile-wrapper {
+	background-color: white;
+	height: 90vh;
+	width: 40%;
+	position: absolute;
+	display:block;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+    color: #454545;
+    background: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #454545;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.profile-image {
+	position: relative;
+	display: flex;
+    left: 15%;
+    right: 40%;
+	width: 70vw;
+	max-width: 400px;  
+	margin-top: -5vh;
+	box-sizing: border-box;
+	border-bottom: 1px solid #7e8288;
+	box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.75);
+	overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image img {
+	width: 100%;
+    
+}
+
+.temp-overlay {
+	position: absolute;
+	width: 700px;
+	height: 700px;
+}
+
+.temp-overlay.one {
+	background-color: #343546;
+	animation: goUpOverlay 2s ease-in-out 1s both;
+}
+
+.temp-overlay.two {
+	background-color: lightgray;
+	animation: goDownOverlay 2s ease-in-out 1s both;
+}
+
+.profile-status {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	color: lightgray;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 10px;
+}
+
+.profile-status::after {
+	content: '';
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: lightgray;
+	margin-bottom: -2px;
+	margin-left: 5px;
+}
+
+.profile-username {
+	font-family: 'Permanent Marker', cursive;
+	color: black;
+	font-size: 14px;
+	letter-spacing: 5px;
+	margin-top: 1rem;
+	text-align: center;
+}
+
+#break-username {
+	display: none;
+}
+
+.profile-intro {
+	padding: 0rem 1rem 1rem 1rem;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+}
+
+.profile-intro-designation {
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+	color: lightgray;
+	letter-spacing: 2px;
+	padding-bottom: 0.5rem;
+}
+
+.profile-intro-description {
+	font-size: 10px;
+	color: #7e8288;
+	line-height: normal;
+	text-align: justify;
+	max-width: 300px;
+}
+
+.profile-stats {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.profile-stat {
+	line-height: 1;
+}
+
+.profile-stat:nth-child(2) {
+	padding: 0 5%;
+	margin: 0 5%;
+	border-left: 1px solid #7e8288;
+	border-right: 1px solid #7e8288;
+}
+
+.profile-stat-title {
+	color: white;
+	font-size: 12px;
+}
+
+.profile-stat-value {
+	color: #21e7b6;
+	font-size: 10px;
+}
+
+.profile-accounts {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	box-shadow: 0px -2px 5px -3px rgba(0, 0, 0, 0.75);
+	background-color: #343546;
+}
+
+.profile-account-link {
+	text-decoration: none;
+	color: #7e8288;
+	cursor: pointer;
+}
+
+.profile-image {
+    /* ... Your existing styles ... */
+    margin-top: 0; /* Remove negative margin-top to align image at the top */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.profile-username {
+    /* ... Your existing styles ... */
+    margin-top: 0.5rem; /* Add a margin-top to separate image and text */
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.profile-account-link:hover {
+	color: lightgray;
+}
+
+@media screen and (min-width: 500px) {
+	.profile-wrapper {
+		width: 70vw;
+	}
+	.profile-username {
+		font-size: 23px;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.profile-wrapper {
+		width: 50vw;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.profile-wrapper {
+		width: 30vw;
+	}
+}
+
+@keyframes fillInText {
+	0% {
+		transform: scaleX(0);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+
+@keyframes goDownOverlay {
+	0% {
+		transform: translate3d(-50px, -50px, 0) rotate(45deg);
+	}
+	100% {
+		transform: rotate(45deg) translate3d(4000px, -50px, 0);
+	}
+}
+
+@keyframes goUpOverlay {
+	0% {
+		transform: translate3d(-50px, -50px, 0) rotate(-135deg);
+	}
+	100% {
+		transform: rotate(-135deg) translate3d(4000px, -50px, 0);
+	}
+}
+
+@keyframes popUp {
+	0% {
+		transform: scale(0);
+	}
+	70% {
+		transform: scale(1.3);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+
+.panel {
+    max-width: 960px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    top: 40%;
+    left: 0%;
+    
+    
+}
+
+button {
+    color: #454545;
+    background: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #454545;
+    position: relative;
+    margin: 1em;
+    display: inline-block;
+    padding: 0.5em 1em;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    font-family: comfortaa;
+    font-weight: bold;
+    /*font-size: */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+button:before,
+button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-color: #454545;
+    box-sizing: border-box;
+    border-style: solid;
+    width: 1em;
+    height: 1em;
+    transition: all 0.3s ease-in-out;
+}
+
+button:before {
+    top: -6px;
+    left: -6px;
+    border-width: 2px 0 0 2px;
+    z-index: 5;
+}
+
+button:after {
+    bottom: -6px;
+    right: -6px;
+    border-width: 0 2px 2px 0;
+}
+
+button:hover:before,
+button:hover:after {
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    border-color: black;
+}
+
+button:hover {
+    color: black;
+    background-color: lightgray;
+    border-color: black;
+}
+
+.panel {
+    max-width: 960px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="profile-wrapper">
+      <div class="profile-image">
+        <!-- Display artist image -->
+    <img id="artistImage" src="" alt="Artist Image">
+        <div class="temp-overlay one"></div>
+        <div class="temp-overlay two"></div>
+      </div>
+      <div class="profile-username">
+         <!-- Display artist information -->
+    <h1 id="artistName"></h1>
+      
+
+        <p>Followers: <span id="artistFollowers"></span></p>
+        <p>Genres: <span id="artistGenres"></span></p>
+    
+      </div>
+    
+    </div>
+
+    <div class="panel">
+        <button>Top Tracks</button>
+        <button>All Albums</button>
+        <button>Videos</button>
+        <button>Add to Favorites</button>
+        <button>Like</button>
+      </div>
+
+      <script>
+        var i = 0;
+        var myTimeout;
+    
+        function typeWriter(artistName) {
+            if (i < artistName.length) {
+                document.getElementById("artistName").textContent += artistName.charAt(i);
+                i++;
+                myTimeout = setTimeout(function () {
+                    typeWriter(artistName);
+                }, 100);
+            } else {
+                clearTimeout(myTimeout);
+            }
+        }
+    
+        function typeWriterText(elementId, text) {
+            let i = 0;
+            const element = document.getElementById(elementId);
+    
+            function typeWriter() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+    
+            typeWriter();
+        }
+    
+        function addAnimToLinks() {
+            let accountLinks = document.querySelector(".profile-accounts").children;
+            for (let i = 0; i < accountLinks.length; i++) {
+                accountLinks[i].style.animation = `popUp 1s ease-in-out ${i * 0.2 + 1.5}s both`;
+            }
+        }
+    
+        // Get the artist ID from the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const artistId = urlParams.get('artistId');
+    
+        // Your Spotify API endpoint for artist details
+        const apiEndpoint = `https://api.spotify.com/v1/artists/${artistId}`;
+    
+        // Your Spotify access token
+        const accessToken = 'BQDeEiuxkvqLTWDnPRjR7EaOrp8HQrZ3E2-7lhTSVOHvp_jtrStevwT9ek3KR6mo7jmceku0cWc4G7hvRaLjUboT3UGkSUgEn6O7fmYRRDpgxvnK8SzrbfeIPzutLLkqeiipLebjXAAQfpAj7DDEVcqR5tMUyyBKRNVw9hdPeyup0_AFjWQDnddfMJKO_NAs257UKBgoluloZkdiql4Ja5n-8VlpRUno';
+    
+        // Fetch artist details using Spotify API
+        fetch(apiEndpoint, {
+            headers: {
+                'Authorization': `Bearer ${accessToken}`
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            const artistImage = data.images[0].url; // Get the first image URL
+            const artistImageElement = document.getElementById('artistImage');
+            artistImageElement.src = artistImage;
+    
+            const artistName = data.name; // Get the artist name
+            typeWriter(artistName);
+    
+            const artistFollowersText = data.followers.total.toString();
+            typeWriterText('artistFollowers', artistFollowersText);
+    
+            const artistGenresText = data.genres.join(', ');
+            typeWriterText('artistGenres', artistGenresText);
+        })
+        .catch(error => {
+            console.error('Error fetching artist details:', error);
+        });
+    
+        window.addEventListener("load", addAnimToLinks);
+    </script>
+    
+    
+    
+
+    
+</body>
+</html>
