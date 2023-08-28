@@ -1,84 +1,26 @@
-.wrapper {
+.wrapper-AV {
     height: 100vh;
     /*This part is important for centering*/
     display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  
+  
   }
 
   body{
     background-color: white;
   }
   
-  .typing-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+
   
-  .typing-demo {
-    display: flex;
-    width: 4ch;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    font-family: helvetica,arial, sans-serif;
-    color: #666;
-    font-size: 3em;
-    max-width: 500px;
     
-    width:100%;
-    height:100%;
-    color: #666;
-    font-weight: bold;
-    font-size: 10vmin;
-    text-transform: uppercase;
-    text-align: left;
-    letter-spacing: -.07em;
-    padding: .5vmax;
-    transition: all .2s ease-in-out;
-    margin-right: 10px; /* Add some right margin for spacing */
-    margin-bottom: 10px; /* Add bottom margin for spacing */
-  }
-  
- 
-
-
-
-  
-  @keyframes typing {
-    from {
-      width: 0
-    }
-  }
-      
-  @keyframes blink {
-    50% {
-      border-color: transparent
-    }
-  }
-
-
-  
-   
-
-   
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-      justify-content: center;
-
-    }
-    
-    h1 {
+    .h1AV {
       font-size: 3rem;
       width: 20ch;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -100,13 +42,13 @@
     margin-bottom: 10px; /* Add bottom margin for spacing */
     }
     
-    form {
+    #AV {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-top: 2rem;
       width: 50ch;
-      
+     
       white-space: nowrap;
       overflow: hidden;
       
@@ -122,17 +64,17 @@
     letter-spacing: -.07em;
     padding: .5vmax;
     transition: all .2s ease-in-out;
-    margin-right: 10px; /* Add some right margin for spacing */
-    margin-bottom: 10px; /* Add bottom margin for spacing */
+    
     }
     
-    label {
+    #birthday {
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
       
+      
     }
     
-    input[type="date"] {
+    #birthday[type="date"] {
         font-size: 3rem;
         width: 20ch;
       
@@ -140,6 +82,7 @@
       overflow: hidden;
       border-right: 3px solid;
       font-family: helvetica,arial, sans-serif;
+      
       color: #666;
       font-size: 3em;
       display: block;
@@ -157,7 +100,7 @@
       max-width: 2000px;
     }
     
-    button {
+    #submitBtn {
         font-size: 3rem;
         width: 20ch;
       white-space: nowrap;
@@ -179,10 +122,13 @@
       margin-right: 10px; /* Add some right margin for spacing */
       margin-bottom: 10px; /* Add bottom margin for spacing */
       max-width: 600px;
+      justify-content: center;
+      
     }
     
-    button:hover {
+    #submitBtn:hover {
       background-color: black;
+      color: white;
     }
     
     #verificationResult {
@@ -211,4 +157,37 @@
     max-width: 2000px;
    
     
+    }
+
+    #nextBtn{
+
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      width: 21ch;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    
+    font-family: helvetica,arial, sans-serif;
+    color: #666;
+    font-size: 3em;
+    display: block;
+    width:100%;
+    height:100%;
+    font-weight: bold;
+    font-size: 10vmin;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    transition: all .2s ease-in-out;
+    margin-left: 10px; /* Add some right margin for spacing */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+    max-width: 250px;
+
+    }
+
+    #nextBtn:hover {
+      background-color: black;
+      color: white;
     }
