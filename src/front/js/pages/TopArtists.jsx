@@ -1,66 +1,65 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../component/Navbar.js'; // Adjust the path
-
-const artistIds = ['3TVXtAsR1Inumwj472S9r4', '0c173mlxpT3dSFRgMO8XPh']; // Add more artist IDs as needed
-const accessToken = 'BQBEGA1Vx9--X4cA_Exa_alPPy5yGALsSBikUp32CIOXNZCZJ_HHqNjNYFl3LPakl29ZkNfY0anTQ3WHxVI5W3bG7aMtSaVco_QN45DS1H9rUwE_bXRXfWR6ndsSrI-VTwd7OHFYHjaDthE6oLW0pWAT0FCIXSECxEyT_VPOR0q7jrq0PmJGczd2rMX90_2SooSMb1bZ-ZKK15G9FT-vNHAL6yfbE4pi'; // Replace with your Spotify access token
+import Navbar from '../component/Navbar.js';
+import axios from 'axios';
 
 const TopArtists = () => {
+  const artistIds = ['3TVXtAsR1Inumwj472S9r4', '4q3ewBCX7sLwd24euuV69X','06HL4z0CvFAxyc27GXpf02','1Xyo4u8uXC1ZmMpatF05PJ']; // Add more artist IDs as needed
+  const accessToken = 'BQACtbnLLzLVlHSvFNVzellHVCVV7AB2tyPUx2E8L5ty4Ow_4Z8xsYYBXltBJQi0oCMblYl531F4E2tL5zGKMtE-A8fAj1wfiTcAcXKA6GA2DWh9HOgLMIg3FqKZYuyQOhTi_5epOk3wAKqpk1MtHRftaZ78fguFaUE0b1bgMQgu100iOxgw3ByE_jltW7xBwGRywFSEQTRTEgC21ahbnDJuW2ZHM3vx'; // Replace with your Spotify access token
+
   const [artistsData, setArtistsData] = useState([]);
-  const [playTrack, setPlayTrack] = useState(null);
+  const [currentTrack, setCurrentTrack] = useState(null);
 
   useEffect(() => {
-    const fetchArtistDetails = async (artistId) => {
-      const artistEndpoint = `https://api.spotify.com/v1/artists/${artistId}`;
-      const topTracksEndpoint = `https://api.spotify.com/v1/artists/${artistId}/top-tracks?country=US`;
-
-      try {
-        const [artistResponse, topTracksResponse] = await Promise.all([
-          fetch(artistEndpoint, {
-            headers: {
-              'Authorization': `Bearer ${accessToken}`
-            }
-          }),
-          fetch(topTracksEndpoint, {
-            headers: {
-              'Authorization': `Bearer ${accessToken}`
-            }
-          })
-        ]);
-
-        const artistData = await artistResponse.json();
-        const topTracksData = await topTracksResponse.json();
-
-        return {
-          id: artistId,
-          name: artistData.name,
-          image: artistData.images[0]?.url || '',
-          topTracks: topTracksData.tracks
-        };
-      } catch (error) {
-        console.error('Error fetching artist details:', error);
-        return null;
-      }
-    };
-
     const fetchAllArtistDetails = async () => {
-      const artistsDetails = await Promise.all(artistIds.map(fetchArtistDetails));
-      setArtistsData(artistsDetails.filter(artist => artist !== null));
+      const artistsDetails = await Promise.all(
+        artistIds.map(async (artistId) => {
+          try {
+            const response = await axios.get(`https://api.spotify.com/v1/artists/${artistId}`, {
+              headers: {
+                Authorization: `Bearer ${accessToken}`,
+              },
+            });
+
+            const topTracksResponse = await axios.get(
+              `https://api.spotify.com/v1/artists/${artistId}/top-tracks?country=US`,
+              {
+                headers: {
+                  Authorization: `Bearer ${accessToken}`,
+                },
+              }
+            );
+
+            const artistInfo = response.data;
+            const topTracks = topTracksResponse.data.tracks;
+
+            return {
+              id: artistId,
+              name: artistInfo.name,
+              image: artistInfo.images[0]?.url || '',
+              topTracks: topTracks,
+            };
+          } catch (error) {
+            console.error('Error fetching artist details:', error);
+            return null;
+          }
+        })
+      );
+
+      setArtistsData(artistsDetails.filter((artist) => artist !== null));
     };
 
     fetchAllArtistDetails();
   }, []);
 
-  useEffect(() => {
-    if (playTrack) {
-      const audioPlayer = new Audio(playTrack);
-      audioPlayer.play();
-
-      return () => {
-        audioPlayer.pause();
-        audioPlayer.currentTime = 0;
-      };
+  const playTrack = (trackUrl) => {
+    if (currentTrack) {
+      currentTrack.pause();
+      currentTrack.currentTime = 0;
     }
-  }, [playTrack]);
+    const audioPlayer = new Audio(trackUrl);
+    audioPlayer.play();
+    setCurrentTrack(audioPlayer);
+  };
 
   return (
     <div>
@@ -71,20 +70,23 @@ const TopArtists = () => {
       </h2>
 
       <div className="container mt-4">
-        <div className="row row-cols-1 row-cols-md-2 g-4">
-          {artistsData.map(artist => (
-            <div key={artist.id} className="col">
+        <div className="row">
+          {artistsData.map((artist) => (
+            <div key={artist.id} className="col-md-14 mb-6">
               <div className="card">
+                <img src={artist.image} className="card-img-top" alt={artist.name} />
                 <div className="card-body">
-                  <h1 className="card-title">{artist.name}</h1>
-                  <img src={artist.image} className="card-img-top" alt="Artist" />
-                  <h2 className="card-subtitle mb-2 text-muted">Top Tracks</h2>
+                  <h5 className="card-title">{artist.name}</h5>
+                  <h6 className="card-subtitle mb-2 text-muted">Top Tracks</h6>
                   <ul className="track-list">
-                    {artist.topTracks.map(track => (
-                      <li key={track.id} className="list-group-item">
-                        <button onClick={() => setPlayTrack(track.preview_url)}>
-                          {track.name}
-                        </button>
+                    {artist.topTracks.map((track, index) => (
+                      <li
+                        key={index}
+                        className="list-group-item"
+                        onClick={() => playTrack(track.preview_url)}
+                        style={{ cursor: 'pointer' }}
+                      >
+                        {track.name}
                       </li>
                     ))}
                   </ul>
@@ -95,56 +97,9 @@ const TopArtists = () => {
         </div>
       </div>
 
-      <div className="container mt-4">
-        <div className="row row-cols-1 row-cols-md-2 g-4">
-          {artistsData.map(artist => (
-            <div key={artist.id} className="col">
-              <div className="card">
-                <div className="card-body">
-                  <h1 className="card-title">{artist.name}</h1>
-                  <img src={artist.image} className="card-img-top" alt="Artist" />
-                  <h2 className="card-subtitle mb-2 text-muted">Top Tracks</h2>
-                  <ul className="track-list">
-                    {artist.topTracks.map(track => (
-                      <li key={track.id} className="list-group-item">
-                        <button onClick={() => setPlayTrack(track.preview_url)}>
-                          {track.name}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      
 
-      <div className="container mt-4">
-        <div className="row row-cols-1 row-cols-md-2 g-4">
-          {artistsData.map(artist => (
-            <div key={artist.id} className="col">
-              <div className="card">
-                <div className="card-body">
-                  <h1 className="card-title">{artist.name}</h1>
-                  <img src={artist.image} className="card-img-top" alt="Artist" />
-                  <h2 className="card-subtitle mb-2 text-muted">Top Tracks</h2>
-                  <ul className="track-list">
-                    {artist.topTracks.map(track => (
-                      <li key={track.id} className="list-group-item">
-                        <button onClick={() => setPlayTrack(track.preview_url)}>
-                          {track.name}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+          </div>
   );
 };
 

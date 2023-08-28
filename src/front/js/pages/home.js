@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
-import Enter from "./Enter.jsx"; // Import the Enter component
+
 import TopArtists from "./TopArtists.jsx";
 
 export const Home = () => {
@@ -9,7 +9,7 @@ export const Home = () => {
 
 	return (
 		<div className="text-center mt-5">
-			<Enter /> 
+			
 			
 			
 			

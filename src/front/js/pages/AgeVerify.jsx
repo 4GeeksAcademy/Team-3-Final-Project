@@ -27,12 +27,12 @@ function AgeVerification() {
   };
 
   return (
-    <div className="wrapper">
-      <div className="container">
-        <div className="container">
-          <h1>Age Verification</h1>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="birthday">Please enter your date of birth (must be over 18 years of age):</label>
+    <div className="wrapper-AV">
+      <div className="container-outer-AV">
+        <div className="container-inner-AV">
+          <h1 className='h1AV'>Age Verification</h1>
+          <form id="AV" onSubmit={handleSubmit}>
+            <label id="birthday">Please enter your date of birth (must be over 18 years of age):</label>
             <input type="date" id="birthday" required />
             <button type="submit" id="submitBtn">Verify Age</button>
           </form>

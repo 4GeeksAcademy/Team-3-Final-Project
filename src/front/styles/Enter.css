@@ -1,222 +1,222 @@
 
-      .wrapper {
-        height: 100vh;
-        /*This part is important for centering*/
-        display: grid;
-        place-items: center;
-      }
+.wrapper-E {
+    height: 100vh;
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+  }
 
-      body{
+  body{
+    background-color: white;
+  }
+  
+  .typing-container-E {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+  }
+  
+  .typing-demo-E {
+    width: 21ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: helvetica,arial, sans-serif;
+    color: #666;
+    font-size: 3em;
+    display: block;
+    width:100%;
+    height:100%;
+    font-weight: bold;
+    font-size: 10vmin;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    transition: all .2s ease-in-out;
+    margin-right: 10px; /* Add some right margin for spacing */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+  
+  .additional-words-E {
+    width: 21ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: helvetica,arial, sans-serif;
+    color: #666;
+    font-size: 3em;
+    display: block;
+    width:100%;
+    height:100%;
+    color: #666;
+    font-weight: bold;
+    font-size: 10vmin;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    transition: all .2s ease-in-out;
+    margin-right: 10px; /* Add some right margin for spacing */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+
+  .additional-words1-E {
+    animation-delay: 4000ms;
+    margin-top: 0.2em;
+    padding-left: 0px;
+    width: 13ch;
+    animation: typing 3s steps(32), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: helvetica,arial, sans-serif;
+    color: #666;
+    font-size: 2em;
+    width:100%;
+    height:100%;
+    font-weight: bold;
+    font-size: 10vmin;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    transition: all .2s ease-in-out;
+    margin-right: 10px; /* Add some right margin for spacing */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+
+  .additional-words2-E {
+    margin-top: 0.2em;
+    padding-left: 0px;
+    width: 6ch;
+    animation: typing 3.5s steps(32), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: helvetica,arial, sans-serif;
+    color: #666;
+    font-size: 2em;
+    width:100%;
+    height:100%;
+    font-weight: bold;
+    font-size: 10vmin;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    transition: all .2s ease-in-out;
+    margin-right: 10px; /* Add some right margin for spacing */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+
+  .additional-words3-E {
+    margin-top: 0.2em;
+    padding-left: 0px;
+    width: 9ch;
+    animation: typing 4s steps(32), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: helvetica,arial, sans-serif;
+    color: #666;
+    font-size: 2em;
+    width:100%;
+    height:100%;
+    font-weight: bold;
+    font-size: 10vmin;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    transition: all .2s ease-in-out;
+    margin-right: 10px; /* Add some right margin for spacing */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+
+  .additional-words4-E {
+    margin-top: 0.2em;
+    padding-left: 0px;
+    width: 10ch;
+    animation: typing 3s steps(32), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: helvetica,arial, sans-serif;
+    font-size: 2em;
+    width:100%;
+    height:100%;
+    color: #666;
+    font-weight: bold;
+    font-size: 10vmin;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: -.07em;
+    justify-content: left;
+    padding: .5vmax;
+    margin-left: 0px; /* Add some right margin for spacing */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+    padding-left: 470px;
+   
+
+  }
+
+  .red-text {
+    color: red;
+  }
+
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+    #enter-E {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: black;
+        cursor: pointer;
+        border-bottom: 4px solid ;
+        transition: border-color 0.3s;
+        position: relative;
+        
+    }
+
+    #enter-E:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
         background-color: white;
-      }
-      
-      .typing-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      
-      .typing-demo {
-        width: 21ch;
-        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid;
-        font-family: helvetica,arial, sans-serif;
-        color: #666;
-        font-size: 3em;
-        display: block;
-        width:100%;
-        height:100%;
-        color: #666;
-        font-weight: bold;
-        font-size: 10vmin;
-        text-transform: uppercase;
-        text-align: left;
-        letter-spacing: -.07em;
-        padding: .5vmax;
-        transition: all .2s ease-in-out;
-        margin-right: 10px; /* Add some right margin for spacing */
-        margin-bottom: 10px; /* Add bottom margin for spacing */
-      }
-      
-      .additional-words {
-        margin-top: 0.2em;
-        padding-left: 0px;
-        width: 10ch;
-        animation: typing 2.5s steps(32), blink .5s step-end infinite alternate;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid;
-        font-family: helvetica,arial, sans-serif;
-        color: #666;
-        font-size: 2em;
-        width:100%;
-        height:100%;
-        font-weight: bold;
-        font-size: 10vmin;
-        text-transform: uppercase;
-        text-align: left;
-        letter-spacing: -.07em;
-        padding: .5vmax;
-        transition: all .2s ease-in-out;
-        margin-right: 10px; /* Add some right margin for spacing */
-        margin-bottom: 10px; /* Add bottom margin for spacing */
-      }
+        z-index: -1;
+        transition: width 0.3s;
+        color: black;
+        
+    }
 
-      .additional-words1 {
-        animation-delay: 4000ms;
-        margin-top: 0.2em;
-        padding-left: 0px;
-        width: 13ch;
-        animation: typing 3s steps(32), blink .5s step-end infinite alternate;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid;
-        font-family: helvetica,arial, sans-serif;
-        color: #666;
-        font-size: 2em;
-        width:100%;
-        height:100%;
-        font-weight: bold;
-        font-size: 10vmin;
-        text-transform: uppercase;
-        text-align: left;
-        letter-spacing: -.07em;
-        padding: .5vmax;
-        transition: all .2s ease-in-out;
-        margin-right: 10px; /* Add some right margin for spacing */
-        margin-bottom: 10px; /* Add bottom margin for spacing */
-      }
+    #enter-E:hover {
+        color: white;
+        background-color: black;
+        
+        
+        
+    }
 
-      .additional-words2 {
-        margin-top: 0.2em;
-        padding-left: 0px;
-        width: 6ch;
-        animation: typing 3.5s steps(32), blink .5s step-end infinite alternate;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid;
-        font-family: helvetica,arial, sans-serif;
-        color: #666;
-        font-size: 2em;
-        width:100%;
-        height:100%;
-        font-weight: bold;
-        font-size: 10vmin;
-        text-transform: uppercase;
-        text-align: left;
-        letter-spacing: -.07em;
-        padding: .5vmax;
-        transition: all .2s ease-in-out;
-        margin-right: 10px; /* Add some right margin for spacing */
-        margin-bottom: 10px; /* Add bottom margin for spacing */
-      }
-
-      .additional-words3 {
-        margin-top: 0.2em;
-        padding-left: 0px;
-        width: 9ch;
-        animation: typing 4s steps(32), blink .5s step-end infinite alternate;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid;
-        font-family: helvetica,arial, sans-serif;
-        color: #666;
-        font-size: 2em;
-        width:100%;
-        height:100%;
-        font-weight: bold;
-        font-size: 10vmin;
-        text-transform: uppercase;
-        text-align: left;
-        letter-spacing: -.07em;
-        padding: .5vmax;
-        transition: all .2s ease-in-out;
-        margin-right: 10px; /* Add some right margin for spacing */
-        margin-bottom: 10px; /* Add bottom margin for spacing */
-      }
-
-      .additional-words4 {
-        margin-top: 0.2em;
-        padding-left: 0px;
-        width: 22ch;
-        animation: typing 5.5s steps(32), blink .5s step-end infinite alternate;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid;
-        font-family: helvetica,arial, sans-serif;
-        font-size: 2em;
-        width:100%;
-        height:100%;
-        color: #666;
-        font-weight: bold;
-        font-size: 10vmin;
-        text-transform: uppercase;
-        text-align: left;
-        letter-spacing: -.07em;
-        padding: .5vmax;
-        margin-left: 820px; /* Add some right margin for spacing */
-        margin-bottom: 10px; /* Add bottom margin for spacing */
-        padding-left: 60px;
-
-      }
-
-      .red-text {
-        color: red;
-      }
-    
-      
-      @keyframes typing {
-        from {
-          width: 0
-        }
-      }
-          
-      @keyframes blink {
-        50% {
-          border-color: transparent
-        }
-      }
-    
-        #enter {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            color: black;
-            cursor: pointer;
-            border-bottom: 4px solid ;
-            transition: border-color 0.3s;
-            position: relative;
-            
-        }
-    
-        #enter:before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background-color: white;
-            z-index: -1;
-            transition: width 0.3s;
-            color: black;
-            
-        }
-    
-        #enter:hover {
-            color: white;
-            background-color: lightgray;
-            
-            
-            
-        }
-    
-        #enter:hover:before {
-            width: 100%;
-        }
+    #enter-E:hover:before {
+        width: 100%;
+    }
 
 
- 

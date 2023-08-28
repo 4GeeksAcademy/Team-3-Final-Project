@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import '../../../front/styles/Enter.css';
 
+
+
 class Enter extends Component {
   state = {
     enterHover: false,
@@ -19,25 +21,27 @@ class Enter extends Component {
     const { enterHover } = this.state;
 
     return (
-      <div className="wrapper">
-        <div className="typing-container">
-          <div className="typing-demo">
+      <div className="wrapper-E">
+        <div className="typing-container-E">
+          <div className="typing-demo-E">
             WELCOME TO HYNPOS.
           </div>
           
-          <div className="additional-words1">
+          <div className="additional-words1-E">
             We <span className="red-text">Love</span> Music.
           </div>
-          <div className="additional-words2">
+          <div className="additional-words2-E">
             All Day.
           </div>
-          <div className="additional-words3">
+          <div className="additional-words3-E">
             Every Day.
           </div>
         </div>
-        <div className="additional-words4">
-          Press <span id="enter">Enter</span> to Get Started.
+
+        <div className="additional-words4-E">
+          Press <span id="enter-E">Enter</span> to Get Started.
         </div>
+       
       </div>
     );
   }
