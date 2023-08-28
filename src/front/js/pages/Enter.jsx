@@ -1,6 +1,7 @@
 // Enter.jsx
 import React, { Component } from 'react';
 import '../../../front/styles/Enter.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -41,6 +42,8 @@ class Enter extends Component {
         <div className="additional-words4-E">
           Press <span id="enter-E">Enter</span> to Get Started.
         </div>
+
+        <Link to="/nextPage2">Go to Next Page</Link>
        
       </div>
     );
