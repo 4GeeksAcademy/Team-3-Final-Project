@@ -12,18 +12,19 @@ import "../styles/index.css";
 import Layout from "./layout";
 import TopArtists from "./pages/TopArtists.jsx";
 import ArtistInfo from "./pages/ArtistInfo";
-import AgeVerification from "./pages/AgeVerify.jsx";
-import TypingEffect from "./pages/PreEnterPage.jsx";
 import Enter from "./pages/Enter.jsx";
+import LandingPage from "./pages/LandingPage.jsx";
+import AuthPage from "./pages/SLpage.jsx";
+
 
 //render your react application
-ReactDOM.render(<Layout />, document.querySelector("#app"));
+//ReactDOM.render(<Layout />, document.querySelector("#app"));
 //ReactDOM.render(<TopArtists />, document.querySelector("#app"));
 //ReactDOM.render(<ArtistInfo />, document.querySelector("#app"));
 //ReactDOM.render(<test />, document.querySelector("#app"));
-//ReactDOM.render(<AgeVerification />, document.querySelector("#app"));
-//ReactDOM.render(<TypingEffect />, document.querySelector("#app"));
+//ReactDOM.render(<AuthPage />, document.querySelector("#app"));
 //ReactDOM.render(<Enter />, document.querySelector("#app"));
+ReactDOM.render(<LandingPage />, document.querySelector("#app"));
 
 
 

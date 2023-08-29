@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 import { BackendURL } from "./component/backendURL";
-import PreEnterPage from './pages/PreEnterPage.jsx'; // Update the path
+
 import Test from './pages/Test.jsx'; // Update the path
 
 
@@ -29,9 +29,7 @@ const Layout = () => {
                 <ScrollToTop>
                     
                     <Routes>
-                    
-                    <Route element={<PreEnterPage/>} path="/" /> {/* Add this route */}
-                    <Route element={<Enter />} path="/nextPage" /> {/* Add this route */}
+                    <Route element={<Enter />} path="/" /> {/* Add this route */}
                     <Route element={<Test />} path="/nextPage2" /> {/* Add this route */}
                     <Route element={<h1>Not found!</h1>} />
 
