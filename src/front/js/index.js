@@ -15,6 +15,7 @@ import ArtistInfo from "./pages/ArtistInfo";
 import Enter from "./pages/Enter.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
 import AuthPage from "./pages/SLpage.jsx";
+import NavBar2 from "./pages/NavBar2.jsx";
 
 
 //render your react application
@@ -24,7 +25,8 @@ import AuthPage from "./pages/SLpage.jsx";
 //ReactDOM.render(<test />, document.querySelector("#app"));
 //ReactDOM.render(<AuthPage />, document.querySelector("#app"));
 //ReactDOM.render(<Enter />, document.querySelector("#app"));
-ReactDOM.render(<LandingPage />, document.querySelector("#app"));
+//ReactDOM.render(<LandingPage />, document.querySelector("#app"));
+ReactDOM.render(<NavBar2 />, document.querySelector("#app"));
 
 
 

@@ -15,7 +15,7 @@ function LandingPage() {
         
         <section>
             <div class="parallax-one">
-              <h2>SOUTHERN CALIFORNIA</h2>
+              <h2>top tracks</h2>
             </div>
         </section>
         
@@ -29,7 +29,7 @@ function LandingPage() {
         
         <section>
           <div class="parallax-two">
-            <h2>NEW YORK</h2>
+            <h2>top albums</h2>
           </div>
         </section>
         
@@ -43,7 +43,7 @@ function LandingPage() {
         
         <section>
           <div class="parallax-three">
-            <h2>ENCHANTED FOREST</h2>
+            <h2>recommendations</h2>
           </div>
         </section>
         
@@ -57,7 +57,7 @@ function LandingPage() {
 
         <section>
             <div class="parallax-one">
-              <h2>SOUTHERN CALIFORNIA</h2>
+              <h2>top artists</h2>
             </div>
         </section>
 
