@@ -8,6 +8,7 @@ import Test from './pages/Test.jsx'; // Update the path
 
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
+import { Login } from "./pages/login.js";
 import { Single } from "./pages/single";
 import Enter from "./pages/Enter.jsx"; // Import the new page component
 import injectContext from "./store/appContext";
@@ -24,7 +25,7 @@ const Layout = () => {
     if(!process.env.BACKEND_URL || process.env.BACKEND_URL == "") return <BackendURL/ >;
 
     return (
-        <div>
+        <div className="d-flex flex-column h-100">
             <BrowserRouter basename={basename}>
                 <ScrollToTop>
                     
@@ -32,7 +33,7 @@ const Layout = () => {
                     
                     <Route element={<PreEnterPage/>} path="/" /> {/* Add this route */}
                     <Route element={<Enter />} path="/nextPage" /> {/* Add this route */}
-                    <Route element={<Test />} path="/nextPage2" /> {/* Add this route */}
+                    <Route element={<Login />} path="/login" /> {/* Add this route */}
                     <Route element={<h1>Not found!</h1>} />
 
                     
