@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../component/Navbar.js';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useAccessToken } from '../AccessTokenContext.jsx';
 
 const TopArtists = () => {
   const artistIds = ['3TVXtAsR1Inumwj472S9r4', '4q3ewBCX7sLwd24euuV69X','06HL4z0CvFAxyc27GXpf02','1Xyo4u8uXC1ZmMpatF05PJ','6eUKZXaKkcviH0Ku9w2n3V','1uNFoZAHBGtllmzznpCI3s','66CXWjxzNUsdJxJ2JdwvnR','3Nrfpe0tUJi4K4DXYWgMUX','246dkjvS1zLTtiykXe5h60','6qqNVTkY8uBg9cP3Jd7DAH']; // Add more artist IDs as needed
-  const accessToken = 'BQBbxDqj-G4FTo3wZIUdGSQIlaCaDTCYXbrqjwqg-saj7gXEewydR3cCJAP70mAqPlHooBR9e9WlxqB0fruT6RSukZB5Ms7Wn8jyFm0EoQkhal9KicTH8SgIamvPjphdMJoj4z0WxxegK8XGcaVP3u8ibutq0yblD9ZtN_9k0HkWHSWGHBD3_boHEdQ5LZNpBoE41Zdi4CG_CD5GNecRMmBlQYUQ-yCh'; // Replace with your Spotify access token
+  const { accessToken } = useAccessToken(); // Replace with your Spotify access token
 
   const [artistsData, setArtistsData] = useState([]);
   const [currentTrack, setCurrentTrack] = useState(null);
