@@ -1,0 +1,179 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    justify-content: right;
+
+  }
+  
+  .form-container {
+    width: 50%;
+    padding: 20px;
+    border-right: 5px solid #666;
+    
+    
+    
+  }
+
+  .sepreator{
+    border-bottom: 3px solid #666 !important ;
+    
+  }
+  
+  .form-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .form-container label,
+  .form-container input {
+    display: block;
+    margin-bottom: 4px;
+    width: 8ch;
+  white-space: nowrap;
+  overflow: hidden;
+ 
+  font-family: helvetica,arial, sans-serif;
+  color: #666;
+  font-size: 20px;
+  display: block;
+  width:100%;
+  height:100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: -.07em;
+  padding: .5vmax;
+  transition: all .2s ease-in-out;
+  }
+  
+  .toggle-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: left;
+    display: block;
+    
+   
+
+
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #666;
+    color: white;
+    border: solid;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+    width: 5ch;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: helvetica,arial, sans-serif;
+  color: black;
+  display: block;
+  width:100%;
+  height:100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: -.07em;
+  padding: .5vmax;
+  transition: all .2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color:black;
+    color: white;
+    border: solid;
+  }
+
+  h2{
+    width: 21ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: helvetica,arial, sans-serif;
+    color: #666;
+    font-size: 3em;
+    display: block;
+    width:100%;
+    height:100%;
+    color: #666;
+    font-weight: bold;
+    font-size: 10vmin;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    transition: all .2s ease-in-out;
+  }
+
+  .red-text{
+    color: red;
+  }
+
+
+  .sign-up{
+    width: 21ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: helvetica,arial, sans-serif;
+    color: #666;
+    font-size: 2em;
+    display: block;
+    width:100%;
+    height:100%;
+    font-weight: bold;
+    font-size: 7vmin;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    transition: all .2s ease-in-out;
+   
+  }
+
+  .log-in{
+    
+        width: 21ch;
+        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        font-family: helvetica,arial, sans-serif;
+        color: #666;
+        font-size: 2em;
+        display: block;
+        width:100%;
+        height:100%;
+        font-weight: bold;
+        font-size: 7vmin;
+        text-transform: uppercase;
+        text-align: left;
+        letter-spacing: -.07em;
+        padding: .5vmax;
+        transition: all .2s ease-in-out;
+       
+  }
+ 
+
+
+
+
+
+
+
+
+
+
+  

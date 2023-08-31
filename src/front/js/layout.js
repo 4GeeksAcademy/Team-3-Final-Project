@@ -3,13 +3,21 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 import { BackendURL } from "./component/backendURL";
 
+import Test from './pages/Test.jsx'; // Update the path
+
+
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
+import Enter from "./pages/Enter.jsx"; // Import the new page component
 import injectContext from "./store/appContext";
+import AuthForm from "./pages/SLpage.jsx"; // Import the new page component
 
-import { Navbar } from "./component/navbar";
+//import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import LandingPage from "./pages/LandingPage.jsx";
+import TopArtists from "./pages/TopArtists.jsx";
+import TopAlbums from "./pages/TopAlbums.jsx";
 
 //create your first component
 const Layout = () => {
@@ -23,12 +31,15 @@ const Layout = () => {
         <div>
             <BrowserRouter basename={basename}>
                 <ScrollToTop>
-                    <Navbar />
+                    
                     <Routes>
-                        <Route element={<Home />} path="/" />
-                        <Route element={<Demo />} path="/demo" />
-                        <Route element={<Single />} path="/single/:theid" />
-                        <Route element={<h1>Not found!</h1>} />
+                    <Route element={<AuthForm />} path="/" /> {/* Add this route */}
+                    <Route element={<LandingPage />} path="/LandingPage" /> {/* Add this route */}
+                    <Route element={<TopArtists />} path="/TopArtists" /> {/* Add this route */}
+                    <Route element={<TopAlbums />} path="/TopAlbums" /> {/* Add this route */}
+                    <Route element={<h1>Not found!</h1>} />
+
+                    
                     </Routes>
                     <Footer />
                 </ScrollToTop>

@@ -1,11 +1,13 @@
 import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+
+import TopArtists from "./TopArtists.jsx";
 
 export const Home = () => {
     const { store, actions } = useContext(Context);
 
+<<<<<<< HEAD
     useEffect(() => {
         // Check if the access token is present in the URL fragment
         const urlParams = new URLSearchParams(window.location.hash.slice(1));
@@ -27,4 +29,15 @@ export const Home = () => {
             </a>
         </div>
     );
+=======
+	return (
+		<div className="text-center mt-5">
+			
+			
+			
+			
+
+		</div>
+	);
+>>>>>>> leo
 };
