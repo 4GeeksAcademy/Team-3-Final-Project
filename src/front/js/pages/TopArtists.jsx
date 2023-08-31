@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../component/Navbar.js';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const TopArtists = () => {
-  const artistIds = ['3TVXtAsR1Inumwj472S9r4', '4q3ewBCX7sLwd24euuV69X','06HL4z0CvFAxyc27GXpf02','1Xyo4u8uXC1ZmMpatF05PJ']; // Add more artist IDs as needed
-  const accessToken = 'BQACtbnLLzLVlHSvFNVzellHVCVV7AB2tyPUx2E8L5ty4Ow_4Z8xsYYBXltBJQi0oCMblYl531F4E2tL5zGKMtE-A8fAj1wfiTcAcXKA6GA2DWh9HOgLMIg3FqKZYuyQOhTi_5epOk3wAKqpk1MtHRftaZ78fguFaUE0b1bgMQgu100iOxgw3ByE_jltW7xBwGRywFSEQTRTEgC21ahbnDJuW2ZHM3vx'; // Replace with your Spotify access token
+  const artistIds = ['3TVXtAsR1Inumwj472S9r4', '4q3ewBCX7sLwd24euuV69X','06HL4z0CvFAxyc27GXpf02','1Xyo4u8uXC1ZmMpatF05PJ','6eUKZXaKkcviH0Ku9w2n3V','1uNFoZAHBGtllmzznpCI3s','66CXWjxzNUsdJxJ2JdwvnR','3Nrfpe0tUJi4K4DXYWgMUX','246dkjvS1zLTtiykXe5h60','6qqNVTkY8uBg9cP3Jd7DAH']; // Add more artist IDs as needed
+  const accessToken = 'BQBbxDqj-G4FTo3wZIUdGSQIlaCaDTCYXbrqjwqg-saj7gXEewydR3cCJAP70mAqPlHooBR9e9WlxqB0fruT6RSukZB5Ms7Wn8jyFm0EoQkhal9KicTH8SgIamvPjphdMJoj4z0WxxegK8XGcaVP3u8ibutq0yblD9ZtN_9k0HkWHSWGHBD3_boHEdQ5LZNpBoE41Zdi4CG_CD5GNecRMmBlQYUQ-yCh'; // Replace with your Spotify access token
 
   const [artistsData, setArtistsData] = useState([]);
   const [currentTrack, setCurrentTrack] = useState(null);
@@ -65,14 +66,15 @@ const TopArtists = () => {
     <div>
       <Navbar />
       <h1>Top Artists to Get You Started</h1>
+      <Link to='/LandingPage'>Home</Link>
       <h2 className="sub-header">
         Curated by the HYPNOS Team and Currently Trending
       </h2>
 
-      <div className="container mt-4">
+      <div className="container mt-3">
         <div className="row">
           {artistsData.map((artist) => (
-            <div key={artist.id} className="col-md-14 mb-6">
+            <div key={artist.id} className="col-md-6 mb-4">
               <div className="card">
                 <img src={artist.image} className="card-img-top" alt={artist.name} />
                 <div className="card-body">

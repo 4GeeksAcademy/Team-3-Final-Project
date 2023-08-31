@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/SLPage.css'; // Make sure to adjust the path to your CSS file
+import { Link } from 'react-router-dom';
 
 const AuthForm = () => {
   return (
@@ -32,7 +33,9 @@ const AuthForm = () => {
           <label htmlFor="password2"></label>
           <input type="password" id="password2" placeholder="Password" />
           <div className="buttons">
-            <button type="submit">Sign Up</button>
+            <Link to="/LandingPage">
+            <button type="submit">Sign Up</button>  
+            </Link>
           </div>
         </form>
         </form>

@@ -19,14 +19,14 @@ import NavBar2 from "./pages/NavBar2.jsx";
 
 
 //render your react application
-//ReactDOM.render(<Layout />, document.querySelector("#app"));
+ReactDOM.render(<Layout />, document.querySelector("#app"));
 //ReactDOM.render(<TopArtists />, document.querySelector("#app"));
 //ReactDOM.render(<ArtistInfo />, document.querySelector("#app"));
 //ReactDOM.render(<test />, document.querySelector("#app"));
 //ReactDOM.render(<AuthPage />, document.querySelector("#app"));
 //ReactDOM.render(<Enter />, document.querySelector("#app"));
 //ReactDOM.render(<LandingPage />, document.querySelector("#app"));
-ReactDOM.render(<NavBar2 />, document.querySelector("#app"));
+//ReactDOM.render(<NavBar2 />, document.querySelector("#app"));
 
 
 

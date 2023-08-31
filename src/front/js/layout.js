@@ -11,9 +11,13 @@ import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import Enter from "./pages/Enter.jsx"; // Import the new page component
 import injectContext from "./store/appContext";
+import AuthForm from "./pages/SLpage.jsx"; // Import the new page component
 
 //import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import LandingPage from "./pages/LandingPage.jsx";
+import TopArtists from "./pages/TopArtists.jsx";
+import TopAlbums from "./pages/TopAlbums.jsx";
 
 //create your first component
 const Layout = () => {
@@ -29,8 +33,10 @@ const Layout = () => {
                 <ScrollToTop>
                     
                     <Routes>
-                    <Route element={<Enter />} path="/" /> {/* Add this route */}
-                    <Route element={<Test />} path="/nextPage2" /> {/* Add this route */}
+                    <Route element={<AuthForm />} path="/" /> {/* Add this route */}
+                    <Route element={<LandingPage />} path="/LandingPage" /> {/* Add this route */}
+                    <Route element={<TopArtists />} path="/TopArtists" /> {/* Add this route */}
+                    <Route element={<TopAlbums />} path="/TopAlbums" /> {/* Add this route */}
                     <Route element={<h1>Not found!</h1>} />
 
                     

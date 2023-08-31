@@ -1,5 +1,7 @@
 import React from 'react'
 import '../../../front/styles/Land.css';
+import { Link } from 'react-router-dom';
+import SpotifyEmbed from '../component/SpotifyEmbed.jsx'; // Update the path to the SpotifyEmbed component
 
 function LandingPage() {
   return (
@@ -30,13 +32,21 @@ function LandingPage() {
         <section>
           <div class="parallax-two">
             <h2>top albums</h2>
+            
+           
           </div>
         </section>
         
         <section>
           <div class="block">
+
+            {/* Embed Spotify album */}
+            <SpotifyEmbed uri="18NOKLkZETa4sWwLMIm0UZ" />
             <p><span class="first-character ny">B</span>reaking into the New York fashion world is no easy task. But by the early 2000's, UGG Australia began to take it by storm. The evolution of UGG from a brand that made sheepskin boots, slippers, clogs and sandals for an active, outdoor lifestyle to a brand that was now being touted as a symbol of a stylish, casual and luxurious lifestyle was swift. Much of this was due to a brand repositioning effort that transformed UGG into a high-end luxury footwear maker. As a fashion brand, UGG advertisements now graced the pages of Vogue Magazine as well as other fashion books. In the mid 2000's, the desire for premium casual fashion was popping up all over the world and UGG was now perfectly aligned with this movement.</p>
             <p class="line-break margin-top-10"></p>
+            <Link to='/TopAlbums'>
+            <h3>View more Albums</h3>
+            </Link>
             <p class="margin-top-10">Fueled by celebrities from coast to coast wearing UGG boots and slippers on their downtime, an entirely new era of fashion was carved out. As a result, the desire and love for UGG increased as people wanted to go deeper into this relaxed UGG experience. UGG began offering numerous color and style variations on their sheepskin boots and slippers. Cold weather boots for women and men and leather casuals were added with great success. What started as a niche item, UGG sheepskin boots were now a must-have staple in everyone's wardrobe. More UGG collections followed, showcasing everything from knit boots to sneakers to wedges, all the while maintaining that luxurious feel UGG is known for all over the world. UGG products were now seen on runways and in fashion shoots from coast to coast. Before long, the love spread even further.</p>
           </div>
         </section>
@@ -57,7 +67,13 @@ function LandingPage() {
 
         <section>
             <div class="parallax-one">
-              <h2>top artists</h2>
+
+              <Link to='/TopArtists'>
+              <h2>top artists</h2> 
+              
+              </Link>
+             
+              
             </div>
         </section>
 
