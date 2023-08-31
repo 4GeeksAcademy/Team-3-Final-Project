@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useAccessToken } from '../AccessTokenContext.jsx';
+import { useAccessToken } from 'src/front/js/AccessTokenContext.jsx';
 
 const ArtistInfo = () => {
   const { accessToken } = useAccessToken();
@@ -8,7 +8,7 @@ const ArtistInfo = () => {
   useEffect(() => {
     const fetchArtistInfo = async () => {
       try {
-        const response = await fetch("https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb", {
+        const response = await fetch("https://api.spotify.com/v1/artists/3aQeKQSyrW4qWr35idm0cy", {
           headers: {
             "Authorization": `Bearer ${accessToken}`
           }
