@@ -1,14 +1,19 @@
 //import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
+<<<<<<< HEAD
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+=======
+import { AccessTokenProvider } from "./AccessTokenContext.jsx";
+>>>>>>> tcm68
 
 //include your index.scss file into the bundle
 import "../styles/index.css";
 
 
 //import your own components
+<<<<<<< HEAD
 import Layout from "./layout";
 import TopArtists from "./pages/TopArtists.jsx";
 import ArtistInfo from "./pages/ArtistInfo";
@@ -31,3 +36,16 @@ ReactDOM.render(<Layout />, document.querySelector("#app"));
 
 
 //this is a quick test just see...
+=======
+import App from "./App.jsx";
+
+//render your react application
+ReactDOM.render(
+    <React.StrictMode>
+      <AccessTokenProvider>
+        <App />
+      </AccessTokenProvider>
+    </React.StrictMode>,
+    document.querySelector('#app')
+  );
+>>>>>>> tcm68
