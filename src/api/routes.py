@@ -8,9 +8,14 @@ from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token
 from flask_jwt_extended import get_jwt_identity
 from flask_jwt_extended import jwt_required
+from flask_jwt_extended import JWTManager
+
 
 api = Blueprint('api', __name__)
 
+
+app.config["JWT_SECRET_KEY"] = os.environ.get('JWT_SECRET')  # Change this!
+jwt = JWTManager(app)
 # Create a route to authenticate your users and return JWTs. The
 # create_access_token() function is used to actually generate the JWT.
 @api.route("/token", methods=["POST"])
