@@ -17,6 +17,7 @@ import LandingPage from "./pages/LandingPage.jsx";
 import AuthPage from "./pages/SLpage.jsx";
 import NavBar2 from "./pages/NavBar2.jsx";
 import SLPage2 from "./pages/SLPage2.jsx";
+import TestPage from "./pages/TestPage.jsx";
 
 
 //render your react application
@@ -29,6 +30,7 @@ ReactDOM.render(<Layout />, document.querySelector("#app"));
 //ReactDOM.render(<LandingPage />, document.querySelector("#app"));
 //ReactDOM.render(<NavBar2 />, document.querySelector("#app"));
 //ReactDOM.render(<SLPage2 />, document.querySelector("#app"));
+//ReactDOM.render(<TestPage />, document.querySelector("#app"));
 
 
 //this is a quick test just see...

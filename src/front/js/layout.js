@@ -18,6 +18,7 @@ import { Footer } from "./component/footer";
 import LandingPage from "./pages/LandingPage.jsx";
 import TopArtists from "./pages/TopArtists.jsx";
 import TopAlbums from "./pages/TopAlbums.jsx";
+import TestPage from "./pages/TestPage.jsx";
 
 //create your first component
 const Layout = () => {
