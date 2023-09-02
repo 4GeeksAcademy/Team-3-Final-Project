@@ -11,6 +11,8 @@ const TopArtists = () => {
   const [artistsData, setArtistsData] = useState([]);
   const [currentTrack, setCurrentTrack] = useState(null);
 
+
+
   useEffect(() => {
     const fetchAllArtistDetails = async () => {
       const artistsDetails = await Promise.all(
