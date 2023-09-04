@@ -11,7 +11,7 @@ import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import Enter from "./pages/Enter.jsx"; // Import the new page component
 import injectContext from "./store/appContext";
-import AuthForm from "./pages/SLpage.jsx"; // Import the new page component
+import { Login } from "./pages/SLpage.js"; // Import the new page component
 
 
 //import { Navbar } from "./component/navbar";
@@ -35,7 +35,7 @@ const Layout = () => {
                 <ScrollToTop>
                     
                     <Routes>
-                    <Route element={<AuthForm />} path="/" /> {/* Add this route */}
+                    <Route element={<Login />} path="/" /> {/* Add this route */}
                     <Route element={<LandingPage />} path="/LandingPage" /> {/* Add this route */}
                     <Route element={<TopArtists />} path="/TopArtists" /> {/* Add this route */}
                     <Route element={<TopAlbums />} path="/TopAlbums" /> {/* Add this route */}
