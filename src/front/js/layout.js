@@ -19,6 +19,7 @@ import LandingPage from "./pages/LandingPage.jsx";
 import TopArtists from "./pages/TopArtists.jsx";
 import TopAlbums from "./pages/TopAlbums.jsx";
 import TestPage from "./pages/TestPage.jsx";
+import TopTracks from "./pages/TopTracks.jsx";
 
 //create your first component
 const Layout = () => {
@@ -38,6 +39,7 @@ const Layout = () => {
                     <Route element={<LandingPage />} path="/LandingPage" /> {/* Add this route */}
                     <Route element={<TopArtists />} path="/TopArtists" /> {/* Add this route */}
                     <Route element={<TopAlbums />} path="/TopAlbums" /> {/* Add this route */}
+                    <Route element={<TopTracks />} path="/TopTracks" /> {/* Add this route */}
                     <Route element={<h1>Not found!</h1>} />
 
                     

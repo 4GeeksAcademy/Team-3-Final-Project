@@ -17,7 +17,12 @@ function LandingPage() {
         
         <section>
             <div class="parallax-one">
+
+              <Link to= '/TopTracks'>
               <h2>top tracks</h2>
+              
+              </Link>
+              
             </div>
         </section>
         
