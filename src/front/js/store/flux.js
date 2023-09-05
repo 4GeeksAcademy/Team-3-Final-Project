@@ -23,7 +23,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			syncTokenFromSessionStore: () => { 
-				const token =sessionStorage.getItem("token");
+				const token = sessionStorage.getItem("token");
 				console.log("Aplication just loaded, synching the session storage token");
 				if(token && token != "" && token!= undefined) setStore({ token : token });
 			},
@@ -42,7 +42,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  };
 
 				try{			  
-					const resp = await fetch ("https://3001-4geeksacade-team3finalp-pc2dhrgzn4h.ws-us104.gitpod.io/api/token", opts);
+					const resp = await fetch ("https://3001-4geeksacade-team3finalp-pc2dhrgzn4h.ws-us104.gitpod.io/api/token", opts)
 					if (resp.status !== 200) {
 						alert("There has been some error");
 					   	return false;
@@ -64,12 +64,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			const store = getStore();
 			const opts ={
 				headers: {
-					"AUthorization": "Bearer" + store.token
+					Authorization: "Bearer" + store.token
 				}
 			}
 				
 					// fetching data from the backend
-					fetch(process.env.BACKEND_URL + "/api/hello", opts)
+					fetch( "https://3001-4geeksacade-team3finalp-pc2dhrgzn4h.ws-us104.gitpod.io/api/token", opts)
 						.then(resp => resp.json())
 						.then(data => setStore({ message: data.message}))
 						.catch(error => console.log("Error loading message from backend", error));
