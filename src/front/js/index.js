@@ -21,7 +21,7 @@ import TestPage from "./pages/TestPage.jsx";
 
 
 //render your react application
-ReactDOM.render(<Layout />, document.querySelector("#app"));
+//ReactDOM.render(<Layout />, document.querySelector("#app"));
 //ReactDOM.render(<TopArtists />, document.querySelector("#app"));
 //ReactDOM.render(<ArtistInfo />, document.querySelector("#app"));
 //ReactDOM.render(<test />, document.querySelector("#app"));
@@ -30,7 +30,7 @@ ReactDOM.render(<Layout />, document.querySelector("#app"));
 //ReactDOM.render(<LandingPage />, document.querySelector("#app"));
 //ReactDOM.render(<NavBar2 />, document.querySelector("#app"));
 //ReactDOM.render(<SLPage2 />, document.querySelector("#app"));
-//ReactDOM.render(<TestPage />, document.querySelector("#app"));
+ReactDOM.render(<TestPage />, document.querySelector("#app"));
 
 
 //this is a quick test just see...

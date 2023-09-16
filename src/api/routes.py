@@ -18,18 +18,29 @@ api = Blueprint('api', __name__)
 def handle_hello():
 
     response_body = {
-        "message": "Hello! I'm a message that came from the backend, check the network tab on the google inspector and you will see the GET request"
+        "message": "Hello! I'm a message that came from the backendfdfdfdfdfdf, check the network tab on the google inspector and you will see the GET request"
     }
 
     return jsonify(response_body), 200
 
-# Add a route to serve the testpage.jsx content
-@api.route('/testpage', methods=['GET'])
+
+
+
+# Add a route to serve the testpage.jsx content and handle submissions
+@api.route('/testpage', methods=['GET', 'POST'])
 def serve_testpage():
-    return send_from_directory(os.path.join('pages', 'static'), 'TestPage.jsx')
+    
+    response_body = {
+        "message": "IF YOUR SEEING THIS THE URL WORKS"
+    }
+
+    return jsonify(response_body), 200
+    
 
 
-@api.route('/signup', methods=['POST'])
+
+
+@api.route('/signup', methods=['POST','GET'])
 def signup():
     data = request.json
     username = data.get('username')
