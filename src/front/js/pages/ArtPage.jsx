@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Dropdown, Button, Row, Col } from 'react-bootstrap';
 import Navbar from '../component/Navbar';
+import CustomNavbar from '../component/CustomNavbar.js';
 import { useAccessToken } from '../AccessTokenContext.jsx';
 
 function ArtPage() {
@@ -98,7 +99,7 @@ function ArtPage() {
 
   return (
     <div>
-      <Navbar />
+      <CustomNavbar />
       <div>
         {isLoading}
         {error && <p>{error}</p>}
