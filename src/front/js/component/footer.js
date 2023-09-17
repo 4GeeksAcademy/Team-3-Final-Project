@@ -7,7 +7,7 @@ export const Footer = () => (
 		<p>
 			
 			
-			<SpotifyEmbed uri="6trNtQUgC8cgbWcqoMYkOR" />
+			
 		</p>
 	</footer>
 );
