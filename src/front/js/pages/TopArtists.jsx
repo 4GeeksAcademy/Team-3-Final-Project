@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 
 const TopArtists = () => {
   const artistIds = ['3TVXtAsR1Inumwj472S9r4', '4q3ewBCX7sLwd24euuV69X','06HL4z0CvFAxyc27GXpf02','1Xyo4u8uXC1ZmMpatF05PJ','6eUKZXaKkcviH0Ku9w2n3V','1uNFoZAHBGtllmzznpCI3s','66CXWjxzNUsdJxJ2JdwvnR','3Nrfpe0tUJi4K4DXYWgMUX','246dkjvS1zLTtiykXe5h60','6qqNVTkY8uBg9cP3Jd7DAH']; // Add more artist IDs as needed
-  const accessToken = 'BQDG37afMm5mRKrzBPRhiI2vyFiYiyKbjjWq0PTqVBlYHwQz6QSTELC-Pv9IpT9boK96OUDRYSJP0eUnVYSTmKhzDJDUvY7JYdW79MFqVzvzdVz5IVGFRt5Q7o_G0ZUXuiAzwAulMq5NixLC9OXsun9vjQajFU1xTfzeJsiewdMe7CtmOwhlonX9r8BgkOWA96OhsRxo80M7FFXNlzQV7CI9OWR2wzTy'; // Replace with your Spotify access token
-
+  const accessToken = 'BQAAWDaw5lsl7eC5gvCsez6kPFQXiM5XPk2Nqg3rlJ6i9YYXG5eQ88AXBQnhY0FKuxY-Rkb5yRxcYpoCGNj-JTKlpp1Nei-XKK-Jn3PBtQNwCGQ5O8twCFLeMkMkJoCIiNxeSOHbcSpIH9fhC1I1rtRm1OGYA1yJ_F6KSFLf2RbHRnN-Q417dQbvce1MLI3cuIKrK9RWjKnZ0HCQd41wBfVGFH122cY4'
   const [artistsData, setArtistsData] = useState([]);
   const [currentTrack, setCurrentTrack] = useState(null);
 
