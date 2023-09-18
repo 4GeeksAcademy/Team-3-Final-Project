@@ -45,8 +45,15 @@ def serve_testpage():
     }
 
     return jsonify(response_body), 200
-    
 
+
+@api.route('/user', methods=['GET'])
+def handle_hello():
+    
+   users = User.query.all()
+   all_people= list(map(lambda x: x.serialize(), users))
+   
+   return jsonify(all_users), 200
 
 
 
@@ -75,3 +82,4 @@ def signup():
     db.session.commit()
 
     return jsonify(message='User registered successfully')
+
