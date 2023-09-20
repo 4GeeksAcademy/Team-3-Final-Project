@@ -4,7 +4,7 @@ import "../../styles/SLPage.css";
 const CLIENT_ID = "7631a1e4f85447c9aac2d3fa92ecb289";
 const SPOTIFY_AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
 const REDIRECT_URL_AFTER_LOGIN =
-  "https://3000-4geeksacade-team3finalp-j47q58tkbwz.ws-us104.gitpod.io/LandingPage";
+  "https://3000-4geeksacade-team3finalp-f94vink443l.ws-us104.gitpod.io/LandingPage";
 const SPACE_DELIMITER = "%20";
 const SCOPES = ["user-top-read"];
 const SCOPES_URL_PARAM = SCOPES.join(SPACE_DELIMITER);
@@ -53,18 +53,17 @@ const WebApp = () => {
         placeholder="Enter your password"
         required
       ></input>
-        
+
       <button onClick={handleLogin}>Log-in</button>
+
       <h2>Welcome</h2>
-        <h2>To hypnos</h2>
-        <h2>
-          We <span className="red-text">love</span> music.
-        </h2>
-        <h2>all day.</h2>
-        <h2>every day.</h2>
-    
+      <h2>To hypnos</h2>
+      <h2>
+        We <span className="red-text">love</span> music.
+      </h2>
+      <h2>all day.</h2>
+      <h2>every day.</h2>
     </div>
-    
   );
 };
 
