@@ -38,8 +38,8 @@ const Layout = () => {
                 <ScrollToTop>
                     
                     <Routes>
-                    <Route element={<AuthForm />} path="/" /> {/* Add this route */}
-                    <Route element={<WebApp />} path="/WebApp" /> {/* Add this route */}
+                    <Route element={<AuthForm />} path="/AuthForm" /> {/* Add this route */}
+                    <Route element={<WebApp />} path="/" /> {/* Add this route */}
                     <Route element={<LandingPage />} path="/LandingPage" /> {/* Add this route */}
                     <Route element={<TopArtists />} path="/TopArtists" /> {/* Add this route */}
                     <Route element={<TopAlbums />} path="/TopAlbums" /> {/* Add this route */}
