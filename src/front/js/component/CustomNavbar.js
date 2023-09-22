@@ -59,20 +59,6 @@ const CustomNavbar = ({ history }) => {
               <Nav.Link href="/ArtPage">Artists Search</Nav.Link>
               
             </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-              />
-              <Button variant="outline-success" onClick={() => setArtists(suggestions)}>
-                Search
-              </Button>
-            </Form>
-          </NavbarBS.Collapse>
         </Container>
       </NavbarBS>
       <div>
