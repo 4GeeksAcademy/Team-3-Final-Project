@@ -56,7 +56,7 @@ const CustomNavbar = ({ history }) => {
               <Nav.Link href='/LandingPage'>Home</Nav.Link>
               <Nav.Link href="/TopArtists">Top Artists</Nav.Link>
               <Nav.Link href="/TopAlbums">Top Albums</Nav.Link>
-              <Nav.Link href="/ArtPage">Artists Search</Nav.Link>
+              <Nav.Link href="/ArtPage">Artists Page</Nav.Link>
               
             </Nav>
           </NavbarBS.Collapse>
