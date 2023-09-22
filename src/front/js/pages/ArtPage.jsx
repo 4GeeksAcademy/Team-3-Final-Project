@@ -3,7 +3,6 @@ import { Container, Dropdown, Button, Row, Col } from 'react-bootstrap';
 import Navbar from '../component/Navbar';
 import CustomNavbar from '../component/CustomNavbar.js';
 import { useAccessToken } from '../AccessTokenContext.jsx';
-import '/workspaces/Team-3-Final-Project/src/front/styles/Artpage.css'
 
 function ArtPage() {
   const [artistInfo, setArtistInfo] = useState(null);
