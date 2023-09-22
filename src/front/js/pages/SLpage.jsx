@@ -113,9 +113,12 @@ const AuthForm = () => {
                 placeholder="Password"
               />
               <div className="buttons">
-                <button>
-                  <Link to="/LandingPage">Log In</Link>
-                </button>
+            
+                  <Link to="/LandingPage">
+                      <button>Log In</button>
+                  </Link>
+
+              
               </div>
             </form>
             <p className="small-text">
