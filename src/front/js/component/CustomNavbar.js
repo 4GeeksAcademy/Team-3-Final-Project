@@ -59,6 +59,7 @@ const CustomNavbar = ({ history }) => {
               <Nav.Link href="/ArtPage">Artists Search</Nav.Link>
               
             </Nav>
+          </NavbarBS.Collapse>
         </Container>
       </NavbarBS>
       <div>
