@@ -10,22 +10,20 @@ const AuthForm = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const [firstName, setFirstName] = useState(""); // Add this
-  const [lastName, setLastName] = useState("");   // Add this
-  const [email, setEmail] = useState("");         // Add this
-
-
+  const [lastName, setLastName] = useState(""); // Add this
+  const [email, setEmail] = useState(""); // Add this
 
   const [signUpSuccess, setSignUpSuccess] = useState(false);
 
   const handleSignupSubmit = async (event) => {
     event.preventDefault();
-  
+
     const firstName = event.target.firstName.value;
     const lastName = event.target.lastName.value;
     const email = event.target.email2.value;
     const username = event.target.username.value;
     const password = event.target.password2.value;
-  
+
     const response = await fetch("/api/signup", {
       method: "POST",
       headers: {
@@ -33,7 +31,7 @@ const AuthForm = () => {
       },
       body: JSON.stringify({ firstName, lastName, email, username, password }),
     });
-  
+
     if (response.ok) {
       setSignUpSuccess(true);
       console.log("Sign-up successful");
@@ -42,7 +40,6 @@ const AuthForm = () => {
       console.error("Sign-up failed");
     }
   };
-  
 
   const toggleForm = () => {
     setIsLogin((prevIsLogin) => !prevIsLogin);
@@ -116,11 +113,16 @@ const AuthForm = () => {
                 placeholder="Password"
               />
               <div className="buttons">
-                <button type="submit">Log In</button>
+                <button>
+                  <Link to="/LandingPage">Log In</Link>
+                </button>
               </div>
             </form>
             <p className="small-text">
-              Don't have an account? <span className="sig" onClick={toggleForm}>Sign Up</span>
+              Don't have an account?{" "}
+              <span className="sig" onClick={toggleForm}>
+                Sign Up
+              </span>
             </p>
           </>
         ) : (
@@ -142,8 +144,7 @@ const AuthForm = () => {
                 id="firstName"
                 placeholder="First Name"
                 value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}  
-
+                onChange={(e) => setFirstName(e.target.value)}
                 disabled={generateRandom}
               />
               <label htmlFor="lastName"></label>
@@ -152,7 +153,7 @@ const AuthForm = () => {
                 id="lastName"
                 placeholder="Last Name"
                 value={lastName}
-                onChange={(e) => setLastName(e.target.value)}    
+                onChange={(e) => setLastName(e.target.value)}
                 disabled={generateRandom}
               />
               <label htmlFor="email2"></label>
@@ -207,12 +208,17 @@ const AuthForm = () => {
                 <Link to="/LandingPage">
                   <button type="submit">submit</button>
                 </Link>
-                
-                {signUpSuccess && <p>Sign-up successful! You can now log in.</p>}
+
+                {signUpSuccess && (
+                  <p>Sign-up successful! You can now log in.</p>
+                )}
               </div>
             </form>
             <p className="small-text">
-              Already have an account? <span className="sig" onClick={toggleForm}>Log In</span>
+              Already have an account?{" "}
+              <span className="sig" onClick={toggleForm}>
+                Log In
+              </span>
             </p>
           </>
         )}
