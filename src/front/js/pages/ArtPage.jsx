@@ -3,6 +3,7 @@ import { Container, Dropdown, Button, Row, Col } from 'react-bootstrap';
 import Navbar from '../component/Navbar';
 import CustomNavbar from '../component/CustomNavbar.js';
 import { useAccessToken } from '../AccessTokenContext.jsx';
+import '/workspaces/Team-3-Final-Project/src/front/styles/Artpage.css'
 
 function ArtPage() {
   const [artistInfo, setArtistInfo] = useState(null);
@@ -155,8 +156,14 @@ function ArtPage() {
             <Dropdown.Toggle variant="secondary" id="dropdown-basic">Top Tracks</Dropdown.Toggle>
             <Dropdown.Menu>
               {topTracks.map((track) => (
-                <Dropdown.Item key={track.id}>{track.name}</Dropdown.Item>
-              ))}
+                <Dropdown.Item key={track.id} >
+                {track.name}
+                <audio controls>
+                  <source src={track.preview_url} type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </Dropdown.Item>
+            ))}
             </Dropdown.Menu>
           </Dropdown>
         )}
