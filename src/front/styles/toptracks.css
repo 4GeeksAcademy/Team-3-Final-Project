@@ -1,0 +1,25 @@
+.head{
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    font-family: helvetica,arial, sans-serif;
+    color: #666;
+    font-size: 3em;
+    display: block;
+    width:100%;
+    height:100%;
+    font-weight: bold;
+    font-size: 10vmin;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -.07em;
+    padding: .5vmax;
+    transition: all .2s ease-in-out;
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+    justify-content: center;
+}
+
+.contianer{
+    text-align: center;
+}

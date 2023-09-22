@@ -119,8 +119,8 @@ const AuthForm = () => {
                 <button type="submit">Log In</button>
               </div>
             </form>
-            <p>
-              Don't have an account? <span onClick={toggleForm}>Sign Up</span>
+            <p className="small-text">
+              Don't have an account? <span className="sig" onClick={toggleForm}>Sign Up</span>
             </p>
           </>
         ) : (
@@ -205,16 +205,14 @@ const AuthForm = () => {
               </div>
               <div className="buttons">
                 <Link to="/LandingPage">
-                  <button type="submit">Sign Up</button>
+                  <button type="submit">submit</button>
                 </Link>
-                <button type="submit" on onClick={handleSignupSubmit}>
-                  Sign Up to db
-                </button>
+                
                 {signUpSuccess && <p>Sign-up successful! You can now log in.</p>}
               </div>
             </form>
-            <p>
-              Already have an account? <span onClick={toggleForm}>Log In</span>
+            <p className="small-text">
+              Already have an account? <span className="sig" onClick={toggleForm}>Log In</span>
             </p>
           </>
         )}

@@ -9,6 +9,30 @@
 .content-asset p {
   margin: 0 auto;
 }
+
+.first{
+
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  
+  font-family: helvetica,arial, sans-serif;
+  color: #666;
+  font-size: 2em;
+  display: block;
+  width:100%;
+  height:100%;
+  font-weight: bold;
+  
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: -.07em;
+  padding: .5vmax;
+  transition: all .2s ease-in-out;
+  margin-bottom: 10px; /* Add bottom margin for spacing */
+  justify-content: center;
+
+}
 .breadcrumb {
   display: none;
 }
@@ -25,7 +49,7 @@
 /* Typography */
 /**************************/
 #parallax-world-of-ugg h1 {
-    width: 21ch;
+    
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
@@ -39,20 +63,28 @@
     font-weight: bold;
     font-size: 10vmin;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     letter-spacing: -.07em;
     padding: .5vmax;
     transition: all .2s ease-in-out;
-    margin-right: 10px; /* Add some right margin for spacing */
     margin-bottom: 10px; /* Add bottom margin for spacing */
     color: black;
+    justify-content: center;
+
+    margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-content: center;
+            background: linear-gradient(135deg, #3498db, #e74c3c, #9b59b6, #1abc9c);
+            background-size: 100% 100%;
+            animation: gradientAnimation 15s infinite;
 }
 #parallax-world-of-ugg h2 {
-    width: 21ch;
+    
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
-    
+    justify-content: center;
     font-family: helvetica,arial, sans-serif;
     color: white;
     font-size: 3em;
@@ -62,10 +94,14 @@
     font-weight: bold;
     font-size: 10vmin;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     letter-spacing: -.07em;
     padding: .5vmax;
     transition: all .2s ease-in-out;
+
+    background-image: url('../img/LandingPage/pexels-elina-sazonova-3971985.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat; /* Adjust as needed */
 }
 #parallax-world-of-ugg h3 {
   line-height: 0.6;
@@ -91,7 +127,7 @@
     transition: all .2s ease-in-out;
   
 }
-#parallax-world-of-ugg p {
+#parallax-world-of-ugg  {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -120,7 +156,7 @@
   
 }
 #parallax-world-of-ugg .title h1 {
-  font-size: 35px;
+  font-size: 4em;
   letter-spacing: 0px;
 
   
@@ -138,7 +174,7 @@
   padding: 60px;
   width: 820px;
   margin: 0 auto;
-  text-align: justify;
+  text-align: center;
 }
 #parallax-world-of-ugg .block-gray {
   background: #f2f2f2;
@@ -163,14 +199,38 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  background-image: url("../img/LandingPage/muisc1.jpg");
+  background-image: url("../img/LandingPage/pexels-elina-sazonova-3971985.jpg");
   background-attachment: fixed;
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
+
+  margin: 0;
+            
+            display: grid;
+            place-content: center;
+            background: linear-gradient(135deg, #3498db, #e74c3c, #9b59b6, #1abc9c);
+            background-size: 200% 200%;
+            animation: gradientAnimation 15s infinite;
+
+           
 }
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+
 #parallax-world-of-ugg .parallax-two {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -184,6 +244,14 @@
   -webkit-background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+
+  margin: 0;
+          
+            display: grid;
+            place-content: center;
+            background: linear-gradient(135deg, #3498db, #e74c3c, #9b59b6, #1abc9c);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s infinite;
 }
 #parallax-world-of-ugg .parallax-three {
   padding-top: 200px;
@@ -198,6 +266,14 @@
   -webkit-background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+
+  margin: 0;
+            
+            display: grid;
+            place-content: center;
+            background: linear-gradient(135deg, #3498db, #e74c3c, #9b59b6, #1abc9c);
+            background-size: 200% 200%;
+            animation: gradientAnimation 15s infinite;
 }
 
 /* Extras */

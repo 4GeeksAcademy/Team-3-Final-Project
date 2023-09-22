@@ -1,18 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from '../component/Navbar.js';
+import React, { useState, useEffect, useRef } from 'react';
+import CustomNavbar from '../component/CustomNavbar.js';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import { useAccessToken } from '../AccessTokenContext.jsx';
+import '../../styles/TopArtistsStyles.css';
 
 const TopArtists = () => {
-  const artistIds = ['3TVXtAsR1Inumwj472S9r4', '4q3ewBCX7sLwd24euuV69X','06HL4z0CvFAxyc27GXpf02','1Xyo4u8uXC1ZmMpatF05PJ','6eUKZXaKkcviH0Ku9w2n3V','1uNFoZAHBGtllmzznpCI3s','66CXWjxzNUsdJxJ2JdwvnR','3Nrfpe0tUJi4K4DXYWgMUX','246dkjvS1zLTtiykXe5h60','6qqNVTkY8uBg9cP3Jd7DAH','246dkjvS1zLTtiykXe5h60']; // Add more artist IDs as needed
-  //const { accessToken } = useAccessToken(); // Replace with your Spotify access token
-
-  const accessToken = 'BQCgacuIiqQp1GJPzAMAa_diAOmj5D1BAJl7ITPfVRHUaNEe1dZOyDusFWPL1rlkHosvCAIuL9DoWn-2pjhxYinrBaRxgZyqUOXih1ORrP6EQ4rIluikDZUk_plrune83lK0-viZrIJl3GcrXV3Qx6S73LuxZglLpL8A-okroBn965pRdceUVoozWUHC2Y3DGDVhBwNckQ2b3D03nAs5laoh_h7s8CHG'
+  const artistIds = ['3TVXtAsR1Inumwj472S9r4', '4q3ewBCX7sLwd24euuV69X','06HL4z0CvFAxyc27GXpf02','1Xyo4u8uXC1ZmMpatF05PJ','6eUKZXaKkcviH0Ku9w2n3V','1uNFoZAHBGtllmzznpCI3s','66CXWjxzNUsdJxJ2JdwvnR','3Nrfpe0tUJi4K4DXYWgMUX','246dkjvS1zLTtiykXe5h60','6qqNVTkY8uBg9cP3Jd7DAH']; 
+  const accessToken = 'BQBJKD3tfaczorkErBFbYpFV3smp-FN-H9qWiJv2sL-jOfRS2J8MsS9CcSS5RjFPbiee8fvlgYQDGLVctYJ_4M9wSJK7WdtDHdjm7FWIuRbWOv0yjv-4-PSoDQODpKEbrcWOKlSb_WQCP-JMx1S4056Ze4nV4BaGvODU0Q3SN1BtEEi7h8hQREfhKF9VZlUO8_8loiPRr-1PdWxrcbKnoZgAc5OfMRwu'; // Replace with your Spotify access token
   const [artistsData, setArtistsData] = useState([]);
   const [currentTrack, setCurrentTrack] = useState(null);
-
-
+  const audioRef = useRef(null);
 
   useEffect(() => {
     const fetchAllArtistDetails = async () => {
@@ -54,23 +50,25 @@ const TopArtists = () => {
     };
 
     fetchAllArtistDetails();
-  }, []);
+  }, [accessToken]);
 
   const playTrack = (trackUrl) => {
     if (currentTrack) {
       currentTrack.pause();
       currentTrack.currentTime = 0;
     }
-    const audioPlayer = new Audio(trackUrl);
-    audioPlayer.play();
-    setCurrentTrack(audioPlayer);
+
+    if (audioRef.current) {
+      audioRef.current.src = trackUrl;
+      audioRef.current.play();
+      setCurrentTrack(audioRef.current);
+    }
   };
 
   return (
     <div>
-      <Navbar />
+      <CustomNavbar></CustomNavbar>
       <h1>Top Artists to Get You Started</h1>
-      <Link to='/LandingPage'>Home</Link>
       <h2 className="sub-header">
         Curated by the HYPNOS Team and Currently Trending
       </h2>
@@ -83,7 +81,7 @@ const TopArtists = () => {
                 <img src={artist.image} className="card-img-top" alt={artist.name} />
                 <div className="card-body">
                   <h5 className="card-title">{artist.name}</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">Top Tracks</h6>
+                 
                   <ul className="track-list">
                     {artist.topTracks.map((track, index) => (
                       <li
@@ -103,9 +101,9 @@ const TopArtists = () => {
         </div>
       </div>
 
-      
-
-          </div>
+      {/* Hidden audio player */}
+      <audio ref={audioRef} controls style={{ display: 'none' }} />
+    </div>
   );
 };
 
